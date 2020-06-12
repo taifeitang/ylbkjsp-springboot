@@ -12,11 +12,20 @@ import org.springframework.http.HttpStatus;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-
+/**
+ * @program: testjson
+ * @description: 公共方法类
+ * @author: wdx
+ * @create: 2020-06-12 09:55
+ **/
 public class CommUtil {
-
-
-
+/**
+* @Description:
+* @Param: [json, get_url]
+* @return: net.sf.json.JSONObject
+* @Author: wdx
+* @Date: 2020/6/12
+*/
     public static JSONObject get_post_josn(JSONObject json, String get_url){
         String iv = "bURwd0AwZUM1ciVvXkR6Mw==";
         String sKey = "MChFY2dzdEIheU1MaU4zL3Z6TTEoQGIjVDU0JDNSciU=";
@@ -52,6 +61,12 @@ public class CommUtil {
         return result;
     }
 
+    /**
+     *
+     * @param json
+     * @param url
+     * @return
+     */
     public static String post(JSONObject json, String url){
         String result = "";
         HttpPost post = new HttpPost("https://minipro.phhp.com.cn/HospitalThirdPartyApi/"+url);
