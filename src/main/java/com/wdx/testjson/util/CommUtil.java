@@ -20,7 +20,7 @@ import java.io.InputStreamReader;
  **/
 public class CommUtil {
 /**
-* @Description:
+* @Description:访问第三方接口的方法
 * @Param: [json, get_url]
 * @return: net.sf.json.JSONObject
 * @Author: wdx
@@ -61,12 +61,13 @@ public class CommUtil {
         return result;
     }
 
-    /**
-     *
-     * @param json
-     * @param url
-     * @return
-     */
+   /**
+   * @Description: 被get_post_josn调用的方法
+   * @Param: [json , url]
+   * @return: java.lang.String
+   * @Author: wdx
+   * @Date: 2020/6/12
+   */
     public static String post(JSONObject json, String url){
         String result = "";
         HttpPost post = new HttpPost("https://minipro.phhp.com.cn/HospitalThirdPartyApi/"+url);
